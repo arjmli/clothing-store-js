@@ -152,15 +152,19 @@ a {
     flex-direction: column;
 }
 
-.trending-card-category {
+.trending-card-category1 {
     font-size: 1.2rem;
     font-weight: 200;
 }
 
-.trending-card-title {
+.trending-card-title1 {
     font-size: 2.2rem;
     font-weight: 600;
     margin-bottom: 1.8rem;
+}
+
+.trending-card-img1 {
+    width: 30%;
 }
 
 .trending-card-btn {
