@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="./styles/style.css" rel="stylesheet" />
+    <link href="./styles/mediaquery.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Junge&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <title>Clotha online store</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- NAVBAR -->
+      <nav class="navbar container">
+        <span class="navbar-logo">Clotha</span>
+
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="#">Tranding</a></li>
+          <li class="navbar-item"><a href="#">Collection</a></li>
+          <li class="navbar-item"><a href="#">Reviews</a></li>
+        </ul>
+
+        <div class="navbar-icons">
+          <a href="#"
+            ><ion-icon class="navbar-icon" name="search-outline"></ion-icon
+          ></a>
+          <a href="#"
+            ><ion-icon class="navbar-icon" name="heart-outline"></ion-icon
+          ></a>
+          <a href="#"
+            ><ion-icon class="navbar-icon" name="bag-handle-outline"></ion-icon
+          ></a>
+        </div>
+      </nav>
+
+      <!-- HEADER -->
+      <header class="header container">
+        <div class="header-title-container">
+          <h1 class="header-title">Make your perfect look for any occasion</h1>
+          <span class="header-subtitle">
+            Update your wardrobe with our fresh selection of </br> clothing and other
+            fashion accessories.
+          </span>
+          <button class="btn">Shop Now</button>
+        </div>
+        <div></div>
+      </header>
+      <span class="pale-bg"></span>
+    </div>
+
+    <!-- NEW TRENDING -->
+    <section class="trending container">
+      <div class="trending-title-container">
+        <h2 class="title-primary">New Trending</h2>
+        <span class="trending-browse-more">
+          <a href="#">Browse more &rarr;</a>
+        </span>
+      </div>
+
+      <div class="trending-card-container">
+        <div class="trending-card grid-span-2 ">
+         <div class="trending-card-info">
+          <span class="trending-card-category">T-Shirts</span>
+          <span class="trending-card-title">Comfort and affordable</span>
+          <button class="trending-card-btn">Shop Now</button>
+         </div> 
+          <img class="trending-card-img" alt=""/>
+        </div>
+        <div class="trending-card grid-span-2 ">
+          <div class="trending-card-info">
+            <span class="trending-card-category">T-Shirts</span>
+            <span class="trending-card-title">Comfort and affordable</span>
+            <button class="trending-card-btn">Shop Now</button>
+           </div> 
+            <img class="trending-card-img" src="" alt=""/>
+        </div>
+        <div class="trending-card grid-span-2 ">
+          <img class="trending-card-img" src="" alt=""/>
+          <div class="trending-card-info">
+            <span class="trending-card-category">T-Shirts</span>
+            <span class="trending-card-title">Comfort and affordable</span>
+            <button class="trending-card-btn">Shop Now</button>
+           </div> 
+        </div>
+        <div class="trending-card">4</div>
+        <div class="trending-card">5</div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section class="testimonial container">
+      <h2 class="title-primary">testimonials</h2>
+      <div class="testimonial-slider"></div>
+    </section>
+
+    <!-- COLLECTION -->
+    <section class="collection container">
+      <h2 class="title-primary">Collection</h2>
+
+      <div class="collection-cards">
+        <div class="collection-card">Men's</div>
+      <div class="collection-card">Women's</div>
+      <div class="collection-card">Jewelery</div>
+      </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+      footer
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

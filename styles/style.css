@@ -1,0 +1,231 @@
+/* GENERALS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Helvetica, sans-serif
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR */
+.root {
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.6rem;
+
+}
+
+.navbar-logo {
+    font-family: 'Junge', cursive;
+    font-size: 3.6rem;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    gap: 4.2rem;
+}
+
+.navbar-item a {
+    text-decoration: none;
+    font-weight: 300;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.navbar-item a:hover {
+    color: #000;
+}
+
+.navbar-icons {
+    display: flex;
+    gap: 1.6rem;
+    font-size: 2.4rem;
+}
+
+.navbar-icons a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    height: 50.6rem;
+    /* background-image: url('../assets/img/header-background.jpeg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.2rem;
+    width: 55%;
+    /* background-color: red; */
+}
+
+.header-title {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 6.4rem;
+    font-weight: 200;
+}
+
+.header-subtitle {
+    font-weight: 200;
+}
+
+.pale-bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background-color: rgba(182, 179, 164, 0.158);
+    width: 60%;
+    height: 62.3rem;
+}
+
+.btn {
+    all: unset;
+    width: 12rem;
+    height: 4.8rem;
+    font-weight: 200;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: inset 0px 0px 0px 1px #000;
+    color: #000;
+    background-color: #fff;
+}
+
+/* TRENDING */
+.trending-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8.2rem;
+    /* padding: 1.4rem; */
+    /* background-color: red; */
+}
+
+.trending-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+
+}
+
+.trending-card {
+    padding: 8.6rem;
+    background-color: rgba(181, 179, 170, 0.249);
+}
+
+.trending-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trending-card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-card-category {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.trending-card-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.8rem;
+}
+
+.trending-card-btn {
+    all: unset;
+    width: 10rem;
+    height: 3.6rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    box-shadow: inset 0px 0px 0px 1px #000;
+    transition: all 0.3s ease;
+}
+
+.trending-card-btn:hover {
+    cursor: pointer;   
+    color: #fff;
+    background-color: #000;
+}
+
+/* TESTOIMONIAL */
+.testimonial {
+    text-align: center;
+    padding: 12rem;
+}
+
+.testimonial-slider {
+    width: 60%;
+    height: 28rem;
+    margin: 0 auto;
+    background-color: rgba(181, 179, 170, 0.249);
+}
+
+/* COLLECTION */
+.collection {
+    /* display: flex; */
+    justify-content: space-around;
+    text-align: center;
+}
+
+.collection-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.collection-card {
+    /* width: 23%;
+    /* height: 10rem; */
+    padding: 12rem 14rem;
+    background-color: rgba(181, 179, 170, 0.249);
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 18rem;
+    padding: 12rem;
+    color: #fff;
+    background-color: #333;
+}
+
+/* assets */
+.title-primary {
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.grid-span-2 {
+    grid-column: span 2;
+}
