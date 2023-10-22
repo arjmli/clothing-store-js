@@ -1,21 +1,44 @@
-const url = 'https://fakestoreapi.com/products'
+const url = "https://fakestoreapi.com/products";
 
 function request(url) {
-    fetch(url)
-    .then(response => response.json())
-    .then(data => result(data))
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      // trending(data)
+      createCollectionBox(data)
+    });
+}
 
+request(url);
+
+
+function trending(data, count = 5) {
+  const trendingTitle = document.querySelectorAll(".trending-card-title");
+  const trendingCardCategory = document.querySelectorAll(".trending-card-category");
+  const trendingCardImg = document.querySelectorAll(".trending-card-img");
+
+  for (let i = 0; i < count; i++) {
+        trendingTitle[i].textContent = data[i].title
+        trendingCardCategory[i].textContent = data[i].category
+        trendingCardImg[i].setAttribute("src", data[i].image);
+  }
 }
 
 
-request(url)
 
+function createCollectionBox (data, count = 8) {
 
-function result(data) {
-    console.log(data[0]);
-    console.log(data.title);
-    const trendingCardImg = document.querySelector('.trending-card-img1')
-    trendingCardImg.setAttribute('src', data[0].image)
-    const trendingCardTitle = document.querySelector('.trending-card-title1')
-    trendingCardTitle.textContent = data[0].title
+  const collectionImg = document.querySelectorAll(".collection-img");
+  const  collectionTitle = document.querySelectorAll(".collection-title");
+  const collectionPriceMain = document.querySelectorAll(".collection-price");
+
+  console.log(collectionImg);
+
+  for (let i = 0; i < count; i++) {
+        collectionPriceMain[i].textContent = `USD ${data[i].price}`
+        collectionTitle[i].textContent = data[i].category
+        collectionImg[i].setAttribute("src", data[i].image);
+  }
+
+  console.log(data);
 }
