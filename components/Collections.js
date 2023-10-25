@@ -3,7 +3,7 @@ import request from "./Request.js";
 export default function collection (data, count = 8) {
     
     const collectionImg = document.querySelectorAll(".collection-img");
-    const  collectionTitle = document.querySelectorAll(".collection-title");
+    const collectionTitle = document.querySelectorAll(".collection-title");
     const collectionPriceMain = document.querySelectorAll(".collection-price");
     
     console.log(collectionImg);
