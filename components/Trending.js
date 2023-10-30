@@ -1,36 +1,29 @@
-import request from "./Request.js";
+import elementGenerator from "../share/ElementGenerator.js";
+import titlePrimary from "../share/titlePrimary.js";
 
-export default function trending(data, count = 5) {
-    const trendingTitle = document.querySelectorAll(".trending-card-title");
-    const trendingCardCategory = document.querySelectorAll(".trending-card-category");
-    const trendingCardImg = document.querySelectorAll('.trending-card-img');
-  
-    for (let i = 0; i < count; i++) {
-          trendingTitle[i].textContent = data[i].title
-          trendingCardCategory[i].textContent = data[i].category
-          trendingCardImg[i].setAttribute("src", data[i].image);
-    }
+export default function trending (data, count = 4) {
+  console.log(data);
+  const trending = elementGenerator('section', 'trending', root)
+  trending.classList.add('container')
+  titlePrimary('New Trending', trending)
+  const trendingCardContainer = elementGenerator('div', 'trending-card-container', trending)
+
+
+  for (let i = 0; i < count; i++) {
+    const trendingCard = elementGenerator('div', 'trending-card', trendingCardContainer)
+    trendingCard.classList.add('trending-card--lg', 'grid-span-2')
+    const trendingCardInfo = elementGenerator('div', 'trending-card-info', trendingCard)
+    
+    const trendingCardCategory = elementGenerator('span', 'trending-card-category', trendingCardInfo)
+    trendingCardCategory.textContent = data[i].category
+    
+    const trendingCardTitle = elementGenerator('span', 'trending-card-title', trendingCardInfo)
+    trendingCardTitle.textContent = data[i].title
+    
+    const btn = elementGenerator('button', 'trending-card-btn', trendingCardInfo)
+    btn.textContent = 'Shop Now'
+    
+    const img = elementGenerator('img', 'trending-card-img', trendingCard)
+    img.setAttribute("src", data[i].image);
   }
-  
-  
-  request(trending)
-
-//   const root = document.getElementById('root')
-
-// console.log(root);
-
-//     const trendingSection = document.createElement('section')
-//     trendingSection.classList.add('trending')
-//     root.appendChild(trendingSection)
-
-//     const titleContainer = document.createElement('div')
-//     titleContainer.classList.add('title-container')
-//     trendingSection.appendChild(titleContainer)
-
-//     const titlePrimary = document.createElement('h2')
-//     titlePrimary.textContent = 'New Trending'
-//     titlePrimary.classList.add('title-primary')
-//     titleContainer.appendChild(titlePrimary)
-
-//     const browseMore = document.createElement('a')
-//     browseMore.classList.add('browse-more')
+}

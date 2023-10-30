@@ -1,21 +1,22 @@
-import request from "./Request.js";
+import titlePrimary from "../share/titlePrimary.js"
+import elementGenerator from "../share/ElementGenerator.js"
 
-export default function collection (data, count = 8) {
-    
-    const collectionImg = document.querySelectorAll(".collection-img");
-    const collectionTitle = document.querySelectorAll(".collection-title");
-    const collectionPriceMain = document.querySelectorAll(".collection-price");
-    
-    console.log(collectionImg);
-    
+export default function collection(data, count = 8) {
+    const collection = elementGenerator('section', 'collection', root)
+    collection.classList.add('container')
+    titlePrimary('Collection', collection, "../pages/collections.html")
+    const collectionCardContainer = elementGenerator('div', 'collection-card-container', collection)
+
     for (let i = 0; i < count; i++) {
-        collectionPriceMain[i].textContent = `USD ${data[i].price}`
-        collectionTitle[i].textContent = data[i].category
-        collectionImg[i].setAttribute("src", data[i].image);
-    }
+        const collectionCard = elementGenerator('div', 'collection-card', collectionCardContainer)
+        const img = elementGenerator('img', 'collection-img', collectionCard)
+        img.setAttribute("src", data[i].image);
     
+        const collectionInfo = elementGenerator('div', 'collection-info-container', collectionCard)
+        const title = elementGenerator('span', 'collection-title', collectionInfo)
+        title.textContent = data[i].title
+        const price = elementGenerator('span', 'collection-price', collectionInfo)
+        price.textContent = `USD ${data[i].price}`
+    }
+
 }
-
-
-request(collection)
-

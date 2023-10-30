@@ -13,7 +13,6 @@ export default function navigation() {
     navbarLogo.textContent = 'Clotha'
 
     const navbarList = elementGenerator('ul', 'navbar-list', navbar)
-
     navbarItems.forEach(el => {
         const li = elementGenerator('li', 'navbar-item', navbarList)
         const a = elementGenerator('a', null, li)
@@ -22,7 +21,6 @@ export default function navigation() {
     })
 
     const navbarIcons = elementGenerator('div', 'navbar-icons', navbar)
-
     navIcons.forEach(el => {
         const a  = elementGenerator('a', null, navbarIcons)
         const ionIcon = elementGenerator('ion-icon', 'navbar-icon', a)
